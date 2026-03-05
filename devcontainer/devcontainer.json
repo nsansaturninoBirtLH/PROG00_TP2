@@ -1,0 +1,56 @@
+{
+  "name": "Java Classroom",
+  "image": "mcr.microsoft.com/devcontainers/java:21",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        // ── COPILOT ──────────────────────────────────────
+        "github.copilot.enable": { "*": false },           // Sin autocompletado de IA
+        "editor.inlineSuggest.enabled": false,              // Sin sugerencias inline
+        "github.copilot.chat.enabled": true,                // Chat para preguntar dudas: SÍ
+        "github.copilot.chat.agent.enabled": false,         // Sin modo agente (no ejecuta acciones)
+        "inlineChat.mode": "preview",                       // Inline chat solo muestra preview, no aplica
+        "editor.inlineChat.enabled": false,                 // Sin Ctrl+I (inline chat en el editor)
+        "github.copilot.chat.edits.enabled": false,         // Sin modo "Edits" (edición directa de ficheros)
+        "github.copilot.chat.codeGeneration.instructions": [], // Sin instrucciones de generación
+        "github.copilot.chat.fixTestFailure.enabled": false,  // Sin auto-fix de tests
+        "github.copilot.chat.generateTests.codeLens": false,  // Sin CodeLens para generar tests
+        "github.copilot.chat.useProjectInstructions": true,   // Usa .github/copilot-instructions.md
+
+        // ── AUTOCOMPLETADO DEL EDITOR ───────────────────
+        "editor.quickSuggestions": {
+          "other": false,                                   // Sin sugerencias mientras escriben
+          "comments": false,
+          "strings": false
+        },
+        "editor.suggestOnTriggerCharacters": false,         // No sugerir al escribir "." etc.
+        "editor.parameterHints.enabled": false,             // No mostrar parámetros de métodos
+        "editor.acceptSuggestionOnCommitCharacter": false,  // No aceptar sugerencia con commit char
+        "editor.snippetSuggestions": "none",                // Sin snippets predefinidos
+
+        // ── CORRECCIÓN AUTOMÁTICA ───────────────────────
+        "editor.autoClosingBrackets": "never",              // Que cierren llaves/paréntesis manualmente
+        "editor.autoClosingQuotes": "never",                // Que cierren comillas manualmente
+        "editor.autoIndent": "none",                        // Sin indentación automática
+        "editor.formatOnType": false,                       // Sin formateo al escribir
+        "editor.formatOnPaste": false,                      // Sin formateo al pegar
+        "editor.formatOnSave": false,                       // Sin formateo al guardar
+
+        // ── IMPORTACIONES Y QUICK FIX ───────────────────
+        "editor.codeActionsOnSave": {},                     // Sin acciones automáticas al guardar
+        "java.completion.enabled": false,                   // Sin autocompletado de Java
+        "editor.lightbulb.enabled": "off",                  // Sin bombillita de acciones rápidas
+
+        // ── JAVA ────────────────────────────────────────
+        "java.server.launchMode": "Standard",               // Modo estándar (necesario para Run/Debug)
+
+        // ── TERMINAL ────────────────────────────────────
+        "terminal.integrated.suggestEnabled": false          // Sin sugerencias en terminal
+      },
+      "extensions": [
+        "vscjava.vscode-java-pack",                         // Extensiones de Java
+        "GitHub.copilot-chat"                                // Chat de Copilot
+      ]
+    }
+  }
+}
